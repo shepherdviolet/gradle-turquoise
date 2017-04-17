@@ -22,11 +22,9 @@ uploadArchives {
     }
 }
 
-//move to local disk, if mvn_local_repo set in gradle.properties
-if (hasProperty("mvn_local_repo")) {
-    task copyArchives(type: Copy){
-        from uri('./release')
-        into uri(mvn_local_repo)
-    }
-    uploadArchives.finalizedBy copyArchives
+//move archives to local repo
+task uploadArchivesToLocalRepo(type: Copy, group: 'upload', description: 'move archives to local repo') {
+    from uri('./release')
+    into uri(mvn_local_repo)
 }
+uploadArchivesToLocalRepo.dependsOn uploadArchives
