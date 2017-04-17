@@ -1,0 +1,32 @@
+group plugin_group
+version plugin_version
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        pom.groupId = project.group
+        pom.artifactId = project.name
+        pom.version = project.version
+        repository(url: uri('./release'))
+    }
+}
+
+//move to local disk, if mvn_local_repo set in gradle.properties
+if (hasProperty("mvn_local_repo")) {
+    task copyArchives(type: Copy){
+        from uri('./release')
+        into uri(mvn_local_repo)
+    }
+    uploadArchives.finalizedBy copyArchives
+}
