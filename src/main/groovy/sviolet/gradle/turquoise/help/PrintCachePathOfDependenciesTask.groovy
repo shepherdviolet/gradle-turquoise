@@ -24,6 +24,17 @@ import org.gradle.api.tasks.TaskAction
 
 /**
  * print the cache paths of dependencies
+ *
+ * <pre>{@code
+ *  allprojects {
+ *      task printCachePathOfDependencies{
+ *          configurations.getByName('compile').each { dependency ->
+ *              println dependency
+ *          }
+ *      }
+ *  }
+ * }</pre>
+ *
  */
 class PrintCachePathOfDependenciesTask extends AbsHelpTask {
 
