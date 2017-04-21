@@ -53,8 +53,7 @@ class PrintCachePathOfDependenciesTask extends AbsHelpTask {
                 project.configurations.getByName((String)filter).each { dependency ->
                     println dependency
                 }
-            } catch (Exception e){
-                throw new GradleException(e)
+            } catch (Exception ignored){
             }
         }
     }
