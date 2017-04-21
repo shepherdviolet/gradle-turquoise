@@ -33,3 +33,19 @@
     apply plugin: 'gradle-turquoise'
 
 ```
+* 5 Extension Configure
+```java
+    turquoise{
+        //printCachePathOfDependencies: select type of dependency
+        printCachePathOfDependenciesFilter = ['compile', 'runtime', 'testCompile', 'testRuntime']
+    }
+```
+
+### Note
+* Extension configure lazy load while plugin task executing
+```java
+    turquoise{
+        //config will load while plugin task executing
+        config = { project.config }
+    }
+```

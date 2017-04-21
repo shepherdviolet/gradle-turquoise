@@ -32,6 +32,9 @@ class TurquoisePlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
+        //config
+        project.extensions.create("turquoise", TurquoisePluginExtension)
+        //tasks
         PrintCachePathOfDependenciesTask.apply(project)
     }
 

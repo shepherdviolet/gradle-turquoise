@@ -19,6 +19,7 @@
 
 package sviolet.gradle.turquoise.help
 
+import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskAction
 
@@ -46,37 +47,24 @@ class PrintCachePathOfDependenciesTask extends AbsHelpTask {
 
     @TaskAction
     void run() {
-        println '====compile===='
-        skipException {
-            project.configurations.getByName('compile').each { dependency ->
-                println dependency
-            }
-        }
-        println '====testCompile===='
-        skipException {
-            project.configurations.getByName('testCompile').each { dependency ->
-                println dependency
-            }
-        }
-        println '====runtime===='
-        skipException {
-            project.configurations.getByName('runtime').each { dependency ->
-                println dependency
-            }
-        }
-        println '====testRuntime===='
-        skipException {
-            project.configurations.getByName('testRuntime').each { dependency ->
-                println dependency
+        project.turquoise.printCachePathOfDependenciesFilter.each { filter ->
+            println '====' + (String)filter + '===='
+            try {
+                project.configurations.getByName((String)filter).each { dependency ->
+                    println dependency
+                }
+            } catch (Exception e){
+                throw new GradleException(e)
             }
         }
     }
 
-    private void skipException(Closure c){
-        try {
-            c()
-        } catch (Exception ignore){
-        }
-    }
+    //method with closure
+//    private static void skipException(Closure c){
+//        try {
+//            c()
+//        } catch (Exception ignore){
+//        }
+//    }
 
 }
