@@ -23,12 +23,12 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.TaskAction
 
 /**
- * print the cache paths of dependencies
+ * print the cache paths of build script dependencies
  *
  * <pre>{@code
  *  allprojects {
- *      task printCachePathOfDependencies{
- *          configurations.getByName('compile').each { dependency ->
+ *      task printCachePathOfBuildScriptDependencies{
+ *          buildscript.configurations.getByName('classpath').each { dependency ->
  *              println dependency
  *          }
  *      }
@@ -36,20 +36,20 @@ import org.gradle.api.tasks.TaskAction
  * }</pre>
  *
  */
-class PrintCachePathOfDependenciesTask extends AbsHelpTask {
+class PrintCachePathOfBuildScriptDependenciesTask extends AbsHelpTask {
 
     static void apply(Project project){
         project.allprojects {
-            it.task('printCachePathOfDependencies', type: PrintCachePathOfDependenciesTask)
+            it.task('printCachePathOfBuildScriptDependencies', type: PrintCachePathOfBuildScriptDependenciesTask)
         }
     }
 
     @TaskAction
     void run() {
-        project.turquoise.printCachePathOfDependenciesFilter.each { filter ->
+        project.turquoise.printCachePathOfBuildScriptDependenciesFilter.each { filter ->
             println '====' + (String)filter + '===='
             try {
-                project.configurations.getByName((String)filter).each { dependency ->
+                project.buildscript.configurations.getByName((String)filter).each { dependency ->
                     println dependency
                 }
             } catch (Exception ignored){

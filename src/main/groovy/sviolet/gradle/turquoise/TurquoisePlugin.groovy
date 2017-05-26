@@ -21,6 +21,7 @@ package sviolet.gradle.turquoise;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project
+import sviolet.gradle.turquoise.help.PrintCachePathOfBuildScriptDependenciesTask
 import sviolet.gradle.turquoise.help.PrintCachePathOfDependenciesTask
 
 /**
@@ -36,6 +37,7 @@ class TurquoisePlugin implements Plugin<Project> {
         project.extensions.create("turquoise", TurquoisePluginExtension)
         //tasks
         PrintCachePathOfDependenciesTask.apply(project)
+        PrintCachePathOfBuildScriptDependenciesTask.apply(project)
     }
 
 }

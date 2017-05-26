@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="gradle-turquoise:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="sviolet" external.system.module.type="sourceSet" external.system.module.version="1.0.170417" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="gradle-turquoise:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="sviolet" external.system.module.type="sourceSet" external.system.module.version="1.1.170526" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../build/classes/test" />
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/groovy" isTestSource="true" />
@@ -14,7 +14,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/3.3/generated-gradle-jars/gradle-api-3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/4.0-milestone-2/generated-gradle-jars/gradle-api-4.0-milestone-2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -23,7 +23,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-bin/64bhckfm0iuu9gap9hg3r7ev2/gradle-3.3/lib/groovy-all-2.4.7.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-milestone-2-all/949rsnxgdwgb4c7izypb5lwm0/gradle-4.0-milestone-2/lib/groovy-all-2.4.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -32,10 +32,30 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-bin/64bhckfm0iuu9gap9hg3r7ev2/gradle-3.3/lib/gradle-installation-beacon-3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-milestone-2-all/949rsnxgdwgb4c7izypb5lwm0/gradle-4.0-milestone-2/lib/gradle-installation-beacon-4.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../build/classes/groovy/main" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-milestone-2-all/949rsnxgdwgb4c7izypb5lwm0/gradle-4.0-milestone-2/lib/gradle-installation-beacon-4.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-milestone-2-all/949rsnxgdwgb4c7izypb5lwm0/gradle-4.0-milestone-2/src" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>

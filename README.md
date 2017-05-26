@@ -1,9 +1,10 @@
-# gradle-turquoise 1.0.170417
+# gradle-turquoise 1.1.170526
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
 ### Tasks
 * printCachePathOfDependencies: print the cache paths of dependencies
+* printCachePathOfBuildScriptDependencies: print the cache paths of build script dependencies
 
 ### Build
 * 1 Clone this project
@@ -38,6 +39,8 @@
     turquoise{
         //printCachePathOfDependencies: select type of dependency
         printCachePathOfDependenciesFilter = ['compile', 'runtime', 'testCompile', 'testRuntime']
+        //printCachePathOfBuildScriptDependencies: select type of dependency
+        printCachePathOfBuildScriptDependenciesFilter = ['classpath']
     }
 ```
 

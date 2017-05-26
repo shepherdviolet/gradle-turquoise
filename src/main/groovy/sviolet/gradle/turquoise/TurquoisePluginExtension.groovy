@@ -10,4 +10,7 @@ class TurquoisePluginExtension {
     //printCachePathOfDependencies: select type of dependency
     String[] printCachePathOfDependenciesFilter = ['compile', 'testCompile']
 
+    //printCachePathOfBuildScriptDependencies: select type of dependency
+    String[] printCachePathOfBuildScriptDependenciesFilter = ['classpath']
+
 }
