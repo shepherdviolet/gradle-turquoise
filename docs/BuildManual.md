@@ -18,7 +18,7 @@
         }
         dependencies {
             //use correct version please
-            classpath 'com.github.shepherdviolet.turquoise:gradle-turquoise:1.1'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:1.1'
         }
     }
     

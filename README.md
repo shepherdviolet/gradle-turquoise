@@ -19,7 +19,7 @@ https://git.oschina.net/shepherdviolet/alternate-maven-repository/raw/master/rep
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet.turquoise:gradle-turquoise:1.1'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:1.1'
         }
     }
     
