@@ -1,4 +1,4 @@
-# gradle-turquoise 1.2.170601
+# gradle-turquoise 1.1
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -15,10 +15,11 @@ https://git.oschina.net/shepherdviolet/alternate-maven-repository/raw/master/rep
 ```gradle
     buildscript {
         repositories {
-            maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
+            maven { url 'https://jitpack.io' }
+            //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'sviolet:gradle-turquoise:1.1'
+            classpath 'com.github.shepherdviolet.turquoise:gradle-turquoise:1.1'
         }
     }
     
