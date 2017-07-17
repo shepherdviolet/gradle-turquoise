@@ -8,9 +8,12 @@ package sviolet.gradle.turquoise
 class TurquoisePluginExtension {
 
     //printCachePathOfDependencies: select type of dependency
-    String[] printCachePathOfDependenciesFilter = ['compile', 'testCompile']
+    public String[] printCachePathOfDependenciesFilter = ['compile', 'testCompile']
 
     //printCachePathOfBuildScriptDependencies: select type of dependency
-    String[] printCachePathOfBuildScriptDependenciesFilter = ['classpath']
+    public String[] printCachePathOfBuildScriptDependenciesFilter = ['classpath']
+
+    //disable lint tasks if true, false by default
+    public boolean disableLint = false
 
 }

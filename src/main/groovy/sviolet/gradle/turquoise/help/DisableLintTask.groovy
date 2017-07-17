@@ -17,29 +17,24 @@
  * Email: shepherdviolet@163.com
  */
 
-package sviolet.gradle.turquoise;
+package sviolet.gradle.turquoise.help
 
-import org.gradle.api.Plugin;
 import org.gradle.api.Project
-import sviolet.gradle.turquoise.help.DisableLintTask
-import sviolet.gradle.turquoise.help.PrintCachePathOfBuildScriptDependenciesTask
-import sviolet.gradle.turquoise.help.PrintCachePathOfDependenciesTask
 
 /**
- * gradle plugin for turquoise
- *
- * Created by S.Violet on 2017/4/17.
+ * disable android lint task
  */
-class TurquoisePlugin implements Plugin<Project> {
+class DisableLintTask extends AbsHelpTask {
 
-    @Override
-    void apply(Project project) {
-        //config
-        project.extensions.create("turquoise", TurquoisePluginExtension)
-        //tasks
-        PrintCachePathOfDependenciesTask.apply(project)
-        PrintCachePathOfBuildScriptDependenciesTask.apply(project)
-        DisableLintTask.apply(project)
+    //  gradle.taskGraph.whenReady { graph ->
+    //      graph.allTasks.findAll { it.name ==~ /lint.*/ }*.enabled = false
+    //  }
+    static void apply(Project project) {
+        project.gradle.taskGraph.whenReady {
+            if (project.turquoise.disableLint) {
+                it.allTasks.findAll { it.name ==~ /lint.*/ }*.enabled = false
+            }
+        }
     }
 
 }
