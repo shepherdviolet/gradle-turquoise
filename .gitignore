@@ -3,6 +3,7 @@
 /.idea/libraries
 /.idea/statistic.xml
 /.idea/gradle_extensions.xml
+/.idea/uiDesigner.xml
 /build
 /captures
 /local.properties
