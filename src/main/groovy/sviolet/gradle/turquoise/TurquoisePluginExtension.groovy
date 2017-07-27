@@ -7,11 +7,11 @@ package sviolet.gradle.turquoise
  */
 class TurquoisePluginExtension {
 
-    //printCachePathOfDependencies: select type of dependency
-    public String[] printCachePathOfDependenciesFilter = ['compile', 'testCompile']
+    //printDependenciesPathFilter: select type of dependency
+    public String[] printDependenciesPathFilter = ['compile', 'testCompile']
 
-    //printCachePathOfBuildScriptDependencies: select type of dependency
-    public String[] printCachePathOfBuildScriptDependenciesFilter = ['classpath']
+    //printBuildDependenciesPathFilter: select type of dependency
+    public String[] printBuildDependenciesPathFilter = ['classpath']
 
     //disable lint tasks if true, false by default
     public boolean disableLint = false

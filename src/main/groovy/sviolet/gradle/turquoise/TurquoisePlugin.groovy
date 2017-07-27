@@ -22,8 +22,8 @@ package sviolet.gradle.turquoise;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project
 import sviolet.gradle.turquoise.help.DisableLintTask
-import sviolet.gradle.turquoise.help.PrintCachePathOfBuildScriptDependenciesTask
-import sviolet.gradle.turquoise.help.PrintCachePathOfDependenciesTask
+import sviolet.gradle.turquoise.help.PrintBuildDependenciesPathTask
+import sviolet.gradle.turquoise.help.PrintDependenciesPathTask
 
 /**
  * gradle plugin for turquoise
@@ -37,8 +37,8 @@ class TurquoisePlugin implements Plugin<Project> {
         //config
         project.extensions.create("turquoise", TurquoisePluginExtension)
         //tasks
-        PrintCachePathOfDependenciesTask.apply(project)
-        PrintCachePathOfBuildScriptDependenciesTask.apply(project)
+        PrintDependenciesPathTask.apply(project)
+        PrintBuildDependenciesPathTask.apply(project)
         DisableLintTask.apply(project)
     }
 
