@@ -7,16 +7,13 @@
 * printCachePathOfBuildScriptDependencies: print the cache paths of build script dependencies
 * disableLint option: disable android lint tasks if true
 
-### Releases (aar/source)
-https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository <br/>
-https://git.oschina.net/shepherdviolet/alternate-maven-repository/raw/master/repository <br/>
-
 ### Import dependencies from maven repository
 
 ```gradle
     buildscript {
         repositories {
             maven { url 'https://jitpack.io' }
+            //Deprecated way, use jitpack.io instead, just for reference
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
