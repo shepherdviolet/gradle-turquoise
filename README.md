@@ -1,4 +1,4 @@
-# gradle-turquoise 1.3
+# gradle-turquoise 6.0
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -17,7 +17,7 @@
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:1.2'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:6.0'
         }
     }
     
