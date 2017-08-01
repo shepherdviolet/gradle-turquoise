@@ -1,4 +1,4 @@
-# gradle-turquoise 6.0
+# gradle-turquoise 6.1
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
