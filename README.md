@@ -17,7 +17,7 @@
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:6.0'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:6.1'
         }
     }
     
