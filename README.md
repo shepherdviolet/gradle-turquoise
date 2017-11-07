@@ -1,4 +1,4 @@
-# gradle-turquoise 6.1
+# gradle-turquoise 7.0
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -17,7 +17,7 @@
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:6.1'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:7.0'
         }
     }
     
@@ -29,9 +29,9 @@
     turquoise{
         //disable android lint tasks if true
         disableLint = true
-        //printCachePathOfDependencies: select type of dependency
+        //printCachePathOfDependencies: select type of dependency (it doesn't work in Gradle 4.1)
         printCachePathOfDependenciesFilter = ['compile', 'runtime', 'testCompile', 'testRuntime']
-        //printCachePathOfBuildScriptDependencies: select type of dependency
+        //printCachePathOfBuildScriptDependencies: select type of dependency (it doesn't work in Gradle 4.1)
         printCachePathOfBuildScriptDependenciesFilter = ['classpath']
     }
 ```
