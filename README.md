@@ -1,4 +1,4 @@
-# gradle-turquoise 8.0
+# gradle-turquoise 9.0
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -17,7 +17,7 @@
             //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:8.0'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:9.0'
         }
     }
     
