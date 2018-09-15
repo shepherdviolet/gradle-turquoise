@@ -1,4 +1,4 @@
-# gradle-turquoise 9.0
+# gradle-turquoise 10.0
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -12,12 +12,11 @@
 ```gradle
     buildscript {
         repositories {
+            //In jitpack.io
             maven { url 'https://jitpack.io' }
-            //Deprecated way, use jitpack.io instead, just for reference
-            //maven { url 'https://github.com/shepherdviolet/alternate-maven-repository/raw/master/repository' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:9.0'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:10.0'
         }
     }
     
