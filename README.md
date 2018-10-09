@@ -1,4 +1,4 @@
-# gradle-turquoise 10.0
+# gradle-turquoise 11.0
 * Gradle plugin for Turquoise project
 * https://github.com/shepherdviolet/gradle-turquoise
 
@@ -16,7 +16,7 @@
             maven { url 'https://jitpack.io' }
         }
         dependencies {
-            classpath 'com.github.shepherdviolet:gradle-turquoise:10.0'
+            classpath 'com.github.shepherdviolet:gradle-turquoise:11.0'
         }
     }
     
